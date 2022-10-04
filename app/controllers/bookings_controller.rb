@@ -13,8 +13,13 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @teacher = Teacher.find(params[:teacher_id])
+    @student = Student.find(params[:student_id])
+    # @user = User.find(params[:id])
     @booking = Booking.new(booking_params)
-    @booking.teacher = @teacher
+    @booking.teacher_id = @teacher.id
+    @booking.student_id = 1
+    # @booking.user_id = current_user.id
     if @booking.save
       redirect_to bookings_path
     else
@@ -24,7 +29,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to list_path(@booking.list), status: :see_other
+    redirect_to bookings_path, status: :see_other
   end
 
   private
@@ -33,7 +38,10 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
+  # def booking_params
+  #   params.require(:booking).permit(:online, :place, :date, :time_starting, :time_ending)
+  # end
   def booking_params
-    params.require(:booking).permit(:online, :place, :date, :time_starting, :time_ending)
+    params.require(:booking).permit(:student_id, :teacher_id, :online, :place, :status, :date, :time_starting, :time_ending, :rating_student, :cost)
   end
 end
