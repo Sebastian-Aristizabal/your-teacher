@@ -3,5 +3,6 @@
 <% @bookings.each do |booking| %>
   <p><%= booking.id %> </p>
   <p><%= booking.teacher.user.first_name %> <%= booking.teacher.user.last_name %> </p>
+    <p><%= booking.student_id %> <%= booking.student.user.first_name %> </p>
                 <%#= link_to "Ver detalles", teacher_path(teacher), class: "custom-btn btn-3" %>
 <% end %>
