@@ -14,12 +14,13 @@ class BookingsController < ApplicationController
 
   def create
     @teacher = Teacher.find(params[:teacher_id])
-    @student = Student.find(params[:student_id])
+    # @student = Student.find(params[:student_id])
     # @user = User.find(params[:id])
     @booking = Booking.new(booking_params)
     @booking.teacher_id = @teacher.id
-    @booking.student_id = 1
-    # @booking.user_id = current_user.id
+    # @booking.student_id = current_user.id
+    @booking.student = current_user.student
+    # @booking.student = current_user.student
     if @booking.save
       redirect_to bookings_path
     else
