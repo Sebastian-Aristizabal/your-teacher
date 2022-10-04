@@ -1,22 +1,26 @@
 <div class="container">
-<%# params[:teacher_id] %>
-<h4> Teacher: <%= @teacher.user.first_name %> <%= @teacher.user.last_name %>, id: <%= @teacher.id %> </h4>
-<%#<%= params[:teacher_id.time_cost_per_hour] %>
-<h4> Student: <%= current_user.first_name %> <%= current_user.last_name %>, id: <%= current_user.id %> </h4>
-<%#<%= raise %>
-  <%=  simple_form_for  [@booking] do |f| %>
-    <%= f.input :date %>
-    <%= f.input :place %>
-    <%= f.input :time_starting %>
-    <%= f.input :time_ending %>
-    <%= f.input :online %>
-    <%= f.submit "submit" %>
-<%# class: "custom-btn btn-3" %>
-  <% end %>
+  <%# params[:teacher_id] %>
+  <h4> Teacher: <%= @teacher.user.first_name %> <%= @teacher.user.last_name %>, id: <%= @teacher.id %> </h4>
+  <%#<%= params[:teacher_id.time_cost_per_hour] %>
+  <h4> Student: <%= current_user.first_name %> <%= current_user.last_name %>, id: <%= current_user.id %> </h4>
+    <%=  simple_form_for [@teacher, @booking] do |f| %>
+      <%# <%= f.input :student_id %>
+      <%# <%= f.input :teacher_id %>
+      <%= f.input :status %>
+      <%= f.input :date %>
+      <%= f.input :place %>
+      <%= f.input :time_starting %>
+      <%= f.input :time_ending %>
+      <%= f.input :rating_student %>
+      <%= f.input :cost %>
+      <%= f.input :online %>
+      <%# <%= f.association :teacher, collection: Teacher.all  %>
+      <%= f.submit "submit" %>
+      <%# class: "custom-btn btn-3" %>
+    <% end %>
 
 </div>
-
-
+<%# Booking.create!(student_id: 1, teacher_id: 1, online: true, place: "mi casa", status: true, date: '1/1/22', time_starting: '1/1/22 %1:01:00', time_ending: '1/1/22 %1:02:00', rating_student: 4 , cost: 20000) %>
  <%# t.boolean "online"
     t.string "place"
 

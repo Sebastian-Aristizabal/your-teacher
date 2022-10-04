@@ -19,11 +19,11 @@ user_8 = User.create!(first_name: "Camilo", last_name: "Perez", email: "camilo@g
 
 Teacher.create!(user_id: user_1.id, phone_number: "+57 305 022 6602", description: "Profesor de matematicas para estudiantes colgados", time_cost_per_hour: 20000,rating: 4, subject: "Matematicas")
 Teacher.create!(user_id: user_3.id, phone_number: "+57 305 022 6602", description: "Profesor de matematicas para estudiantes super dotados", time_cost_per_hour: 20000,rating: 4, subject: "Matematicas")
-Teacher.create!(user_id: user_4.id, phone_number: "+57 305 022 6602", description: "Profesor de matematicas para estudiantes flojos", time_cost_per_hour: 20000,rating: 4, subject: "Matematicas")
+Teacher.create!(user_id: user_4.id, phone_number: "+57 305 022 6602", description: "Profesor de matematicas para estudiantes flojos", time_cost_per_hour: 20000, rating: 4, subject: "Matematicas")
 Student.create!(user_id: user_2.id, phone_number: "+57 305 022 6602", description: "estudiante necesitando profesor")
 Student.create!(user_id: user_5.id, phone_number: "+57 305 022 6602", description: "estudiante necesitando profesor")
 Teacher.create!(user_id: user_6.id, phone_number: "+57 305 022 6602", description: "Profe de inglés", time_cost_per_hour: 20000, rating: 4, subject: "Ingles")
 Teacher.create!(user_id: user_7.id, phone_number: "+57 305 022 6602", description: "Profe de programación", time_cost_per_hour: 20000, rating: 4, subject: "Programacion")
 Teacher.create!(user_id: user_7.id, phone_number: "+57 305 022 6602", description: "Profe de español", time_cost_per_hour: 20000, rating: 4, subject: "Español")
 
-Booking.create!(student_id: 1, teacher_id: 2, online: true, place: "mi casa", status: true, date: '1/1/22', time_starting: '1/1/22 %1:01:00', time_ending: '1/1/22 %1:02:00', rating_student: 4 , cost: 20000)
+Booking.create!(student_id: 1, teacher_id: 1, online: true, place: "mi casa", status: true, date: '1/1/22', time_starting: '1/1/22 %1:01:00', time_ending: '1/1/22 %1:02:00', rating_student: 4 , cost: 20000)
