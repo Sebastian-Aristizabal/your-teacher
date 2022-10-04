@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :find_teacher, only: %i[destroy show]
+  before_action :find_booking, only: %i[destroy show]
   def index
     @bookings = Booking.all
   end
@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @teacher = Teacher.find(params[:teacher_id])
     @booking = Booking.new
   end
 
@@ -33,6 +34,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:online, :place, :date, :time_starting, :time_ending,)
+    params.require(:booking).permit(:online, :place, :date, :time_starting, :time_ending)
   end
 end

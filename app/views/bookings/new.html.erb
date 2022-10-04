@@ -1,18 +1,19 @@
 <div class="container">
-<%= params[:teacher_id] %>
+<%# params[:teacher_id] %>
+<h4> Teacher: <%= @teacher.user.first_name %> <%= @teacher.user.last_name %>, id: <%= @teacher.id %> </h4>
 <%#<%= params[:teacher_id.time_cost_per_hour] %>
-<%= current_user.id %>
+<h4> Student: <%= current_user.first_name %> <%= current_user.last_name %>, id: <%= current_user.id %> </h4>
 <%#<%= raise %>
-  <%=  simple_form_for  @booking do |f| %>
+  <%=  simple_form_for  [@booking] do |f| %>
     <%= f.input :date %>
     <%= f.input :place %>
     <%= f.input :time_starting %>
     <%= f.input :time_ending %>
     <%= f.input :online %>
-    <%= f.submit class: "custom-btn btn-3" %>
-
+    <%= f.submit "submit" %>
+<%# class: "custom-btn btn-3" %>
   <% end %>
-  <%= link_to "Ver detalles", bookings_path, class: "custom-btn btn-3" %>
+
 </div>
 
 
