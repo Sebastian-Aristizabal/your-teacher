@@ -1,2 +1,3 @@
 <h1>teachers show</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= @teacher.description %>
+<%= link_to "Agenda con este profe", new_teacher_booking_path(@teacher), class: "custom-btn btn-3" %>

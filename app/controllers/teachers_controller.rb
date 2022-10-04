@@ -1,7 +1,17 @@
 class TeachersController < ApplicationController
   before_action :find_teacher, only: %i[destroy show]
   def index
-    @teachers = Teacher.all
+    if params[:subject] == "Matematicas"
+      @teachers = Teacher.where(subject: "Matematicas")
+    elsif params[:subject] == "Programacion"
+      @teachers = Teacher.where(subject: "Programacion")
+    elsif params[:subject] == "Ingles"
+      @teachers = Teacher.where(subject: "Ingles")
+    elsif params[:subject] == "Español"
+      @teachers = Teacher.where(subject: "Español")
+    else
+      @teachers = Teacher.all
+    end
   end
 
   def show
