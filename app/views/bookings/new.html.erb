@@ -1,5 +1,30 @@
 <div class="container">
+<%= params[:teacher_id] %>
+<%#<%= params[:teacher_id.time_cost_per_hour] %>
+<%= current_user.id %>
+<%#<%= raise %>
   <%=  simple_form_for  @booking do |f| %>
     <%= f.input :date %>
+    <%= f.input :place %>
+    <%= f.input :time_starting %>
+    <%= f.input :time_ending %>
+    <%= f.input :online %>
+    <%= f.submit class: "custom-btn btn-3" %>
+
   <% end %>
+  <%= link_to "Ver detalles", bookings_path, class: "custom-btn btn-3" %>
 </div>
+
+
+ <%# t.boolean "online"
+    t.string "place"
+
+    t.date "date"
+    t.time "time_starting"
+    t.time "time_ending"
+    t.integer "rating_student"
+    t.integer "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_id"], name: "index_bookings_on_student_id"
+    t.index ["teacher_id"], name: "index_bookings_on_teacher_id" %>
