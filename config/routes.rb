@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  resources :teachers
+  resources :students
   resources :bookings
-  resources :students do
+  resources :teachers do
     resources :bookings, only: [:new, :create]
   end
 

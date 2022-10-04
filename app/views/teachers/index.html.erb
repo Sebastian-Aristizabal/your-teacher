@@ -18,7 +18,7 @@
     <div class="content">
         <h1>PROFESORES</h1>
         <div class="separator"></div>
-        <p>MATEMATICAS</p>
+        <p><%= params[:subject] %></p>
     </div>
     <div class="cards-2">
         <div class="contenedor2">
@@ -29,6 +29,7 @@
                 <p><%= teacher.user.first_name%> <%= teacher.user.last_name%></p>
                 <p><%= teacher.description%></p>
                 <p>Rating: <%= teacher.rating%></p>
+                <%= link_to "Ver detalles", teacher_path(teacher), class: "custom-btn btn-3" %>
               </div>
           </div>
         <% end %>
