@@ -1,3 +1,9 @@
-<h1>teachers show</h1>
-<%= @teacher.description %>
-<%= link_to "Agenda con este profe", new_teacher_booking_path(@teacher), class: "custom-btn btn-3" %>
+  <div class="container">
+  <h1>teachers show</h1>
+  <h6> <strong>Teacher:</strong> <%= @teacher.user.first_name %> <%= @teacher.user.last_name %> </h6>
+  <h6> <strong>Description:</strong> <%= @teacher.description%> </h6>
+  <h6> <strong>Rating:</strong> <%= @teacher.rating%> </h6>
+  <h6> <strong>Specialty:</strong> <%= @teacher.subject%> </h6>
+  <h6> <strong>Cost time per hour:</strong> <%= @teacher.time_cost_per_hour%> </h6>
+  <%= link_to "Reserve", new_teacher_booking_path(@teacher), class: "custom-btn btn-3" %>
+  </div>
