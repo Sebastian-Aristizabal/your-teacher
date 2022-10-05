@@ -27,7 +27,7 @@ class BookingsController < ApplicationController
     @booking.student = current_user.student
     # @booking.student = current_user.student
     if @booking.save
-      redirect_to teacher_bookings_path
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end
