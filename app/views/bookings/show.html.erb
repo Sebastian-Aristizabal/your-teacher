@@ -1,1 +1,15 @@
-<h1>show bookings</h1>
+<h1>show booking</h1>
+<h6><%= @booking.id %> </h6>
+<h6> <strong>Teacher:</strong> <%= @booking.teacher.user.first_name %> <%= @booking.teacher.user.last_name %> </h6>
+<h6> <strong>Student:</strong>  <%= @booking.student.user.first_name %> <%= @booking.student.user.last_name %> </h6>
+<h6><strong>Status:</strong> <%= @booking.status ? "Active" : "canceled" %></h6>
+<h6><strong>Place:</strong> <%= @booking.place %></h6>
+<h6><strong>Time Starting:</strong> <%= @booking.time_starting %></h6>
+<h6><strong>Time Ending:</strong> <%= @booking.time_ending %></h6>
+<h6><strong>Cost:</strong> <%= @booking.cost %></h6>
+<h6><strong>Modality:</strong> <%= @booking.online ? "Online" : "In person" %></h6>
+<%= link_to "Delete",
+  booking_path(@booking),
+  class: "btn btn-primary",
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+ %>
