@@ -1,8 +1,9 @@
 <h1>all bookings</h1>
 <%#= raise %>
 <% @bookings.each do |booking| %>
-  <p><%= booking.id %> </p>
+  <p>Id booking:<%= booking.id %> </p>
   <p><%= booking.teacher.user.first_name %> <%= booking.teacher.user.last_name %> </p>
-  <p><%= booking.student_id %> <%= booking.student.user.first_name %> </p>
+  <p><%= booking.student_id %> <%= booking.student.user.first_name %> <%= booking.student.user.last_name %> </p>
+  <p>Subject:<%= booking.teacher.subject %> </p>
+  <%= link_to "Details", booking_path(booking) %>
 <% end %>
-<%#= link_to "Ver detalles", teacher_path(teacher), class: "custom-btn btn-3" %>

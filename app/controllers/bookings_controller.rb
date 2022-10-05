@@ -1,10 +1,15 @@
 class BookingsController < ApplicationController
-  before_action :find_booking, only: %i[destroy show]
+  before_action :find_booking, only: %i[destroy]
   def index
-    @bookings = Booking.all
+    # @teacher = Teacher.find(params[:teacher_id])
+    # @bookings.student = current_user.student
+    @bookings = Booking.where(student_id: current_user.student)
   end
 
   def show
+    # @teacher = Teacher.find(params[:teacher_id])
+    # @bookings.student = current_user.student
+    @booking = Booking.find(params[:id])
   end
 
   def new
@@ -22,7 +27,7 @@ class BookingsController < ApplicationController
     @booking.student = current_user.student
     # @booking.student = current_user.student
     if @booking.save
-      redirect_to bookings_path
+      redirect_to teacher_bookings_path
     else
       render :new, status: :unprocessable_entity
     end
