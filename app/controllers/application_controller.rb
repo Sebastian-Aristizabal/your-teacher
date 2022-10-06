@@ -8,4 +8,20 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name,:role])
   end
+
+  protected
+
+  # def after_sign_in_path_for(_resource)
+  # if user_session
+  #   bookings_path
+  # else
+  #   current_user.role == "Student" ? new_student_path : new_teacher_path
+  # end
+
+  #   if User.find(current_user.id).new_record?
+  #     bookings_path
+  #   else
+  #     new_student_path
+  #   end
+  # end
 end

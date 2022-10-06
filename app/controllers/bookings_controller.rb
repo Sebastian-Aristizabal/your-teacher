@@ -25,6 +25,7 @@ class BookingsController < ApplicationController
     @booking.teacher_id = @teacher.id
     # @booking.student_id = current_user.id
     @booking.student = current_user.student
+    @booking.cost = (@booking.time_ending - @booking.time_starting) * @teacher.time_cost_per_hour
     # @booking.student = current_user.student
     if @booking.save
       redirect_to bookings_path
@@ -48,6 +49,6 @@ class BookingsController < ApplicationController
   #   params.require(:booking).permit(:online, :place, :date, :time_starting, :time_ending)
   # end
   def booking_params
-    params.require(:booking).permit(:student_id, :teacher_id, :online, :place, :status, :date, :time_starting, :time_ending, :rating_student, :cost)
+    params.require(:booking).permit(:student_id, :teacher_id, :online, :place, :status, :date, :time_starting, :time_ending, :rating_student)
   end
 end
