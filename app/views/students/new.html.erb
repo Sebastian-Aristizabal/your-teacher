@@ -1,9 +1,11 @@
-  <h4> ¡¡Welcome new student, you are now on the road to get new knowledge!! </h4>
-    <%=  simple_form_for @student do |f| %>
+<div class="s-3">
 
-      <%= f.input :phone_number %>
-      <%= f.input :description %>
+    <h4> ¡¡Welcome new student, you are now on the road to get new knowledge!! </h4>
+      <%=  simple_form_for @student do |f| %>
 
-      <%= f.submit "submit" %>
-    <% end %>
+        <%= f.input :phone_number %>
+        <%= f.input :description %>
+
+        <%= f.submit "submit" , class:"btn btn-primary" %>
+      <% end %>
 </div>
