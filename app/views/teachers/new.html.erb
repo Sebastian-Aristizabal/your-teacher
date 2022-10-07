@@ -1,2 +1,10 @@
-<h1>teachers new</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+  <h4> ¡¡Welcome new Teacher, you are now on the road to teach the best students in the world!! </h4>
+    <%=  simple_form_for @teacher do |f| %>
+
+      <%= f.input :phone_number %>
+      <%= f.input :description %>
+      <%= f.input :time_cost_per_hour %>
+      <%= f.input :subject %>
+      <%= f.submit "submit" %>
+    <% end %>
+</div>
