@@ -1,11 +1,16 @@
- 
+<div class="encabezado"></div>
+  <div class="content">
+    <h1>Teacher's information</h1>
+    <div class="separator"></div>
 
-  <div class="container-s">
-  <h1>Tu profesor es</h1>
+  </div>
+
+  <div class="s">
+  <h1>Who is your teacher?</h1>
   <h6> <strong>Teacher:</strong> <%= @teacher.user.first_name %> <%= @teacher.user.last_name %> </h6>
   <h6> <strong>Description:</strong> <%= @teacher.description%> </h6>
   <h6> <strong>Rating:</strong> <%= @teacher.rating%> </h6>
   <h6> <strong>Specialty:</strong> <%= @teacher.subject%> </h6>
   <h6> <strong>Cost time per hour:</strong> <%= @teacher.time_cost_per_hour%> </h6>
-  <%= link_to "Reserve", new_teacher_booking_path(@teacher), class: "custom-btn btn-3" %>
+  <%= link_to "Book now", new_teacher_booking_path(@teacher), class: "custom-btn btn-3_P" %>
   </div>

@@ -8,16 +8,16 @@
 }
 
 .card {
+  background-color: #ffffff;
+  width: 30%;
   box-shadow: 0 0 30px ;
   overflow: hidden;
   border-radius: 15px;
   margin: 7px;
+  height: 600px;
+
 }
 
-.cards {
-  display: flex;
-  justify-content: space-between;
-}
 
 .card img {
   height: 150px;
@@ -48,7 +48,7 @@
 
 .custom-btn {
   width: 150px;
-  height: 40px;
+  height: 150px;
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
@@ -67,6 +67,25 @@
 }
 
 .btn-3 {
+  background: rgb(0, 172, 238);
+  background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+  width: 200px;
+  height: 150px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  text-align: center;
+}
+
+.card img {
+  object-fit: cover;
+  width: 200px;
+  height: 150px;
+  object-position: center;
+
+}
+
+.btn-3_P {
   background: rgb(0, 172, 238);
   background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
   width: 135px;
@@ -199,6 +218,7 @@
   width: 100px;
   display:block;
   margin:auto;
+  object-position: center;
 }
 
 .content h1 {
@@ -223,20 +243,20 @@
   text-align: center;
 }
 
-
-
 .contenedor2 {
   width: 100%;
-  height: 20%;
+  /*  height: 20%;*/
   display: flex;
-  padding: 20px;
+  /*  padding: 20px;*/
   align-items: center;
   background-color: white;
   box-shadow: 10px 10px 30px rgba(142, 43, 43, 0.2);
   border-radius: 30px;
   margin: 15px auto;
-  flex-grow: 40;
-
+  /* flex-grow: 40; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 
 }
 
@@ -292,4 +312,145 @@
   margin: auto;
   background-color: #52bfd5;
   top: 25%;
+}
+
+/*footer*/
+
+.site-footer
+{
+  background: linear-gradient(45deg,#c1c3e0, #0c92cb) !important;
+  padding:20px 0 20px;
+  font-size:12px;
+  line-height:24px;
+  color:#000000;
+  bottom: 0;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#000000;
+}
+.site-footer a:hover
+{
+  color:#c1c3e0;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#000000
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#c1c3e0;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#000000
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+
+
+
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+
+/* show de profesor*/
+.s {
+  width: 375px;
+  margin: auto;
+  background-color: #52bfd5;
+  margin: 15px auto;
+  padding: 40px;
+  margin: 420px auto 50px auto;
+  border-radius: 20px;
+  box-shadow: 5px 10px #888888;
+
+}
+
+/*reserva con los datos*/
+
+
+.reserva{
+  width: 550px;
+  margin: auto;
+  background-color: #52bfd5;
+  margin: 420px auto 50px auto;
+  border-radius: 20px;
+  box-shadow: 5px 10px #888888;
 }
