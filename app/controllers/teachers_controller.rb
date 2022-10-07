@@ -25,6 +25,7 @@ class TeachersController < ApplicationController
 
   def create
     @teacher = Teacher.new(teacher_params)
+    @teacher.user_id = current_user.id
     if @teacher.save
       redirect_to teacher_path(@teacher)
     else
