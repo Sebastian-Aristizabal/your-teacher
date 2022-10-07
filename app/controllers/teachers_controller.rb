@@ -1,14 +1,14 @@
 class TeachersController < ApplicationController
   before_action :find_teacher, only: %i[destroy show]
   def index
-    if params[:subject] == "Matematicas"
-      @teachers = Teacher.where(subject: "Matematicas")
-    elsif params[:subject] == "Programacion"
-      @teachers = Teacher.where(subject: "Programacion")
-    elsif params[:subject] == "Ingles"
-      @teachers = Teacher.where(subject: "Ingles")
-    elsif params[:subject] == "Español"
-      @teachers = Teacher.where(subject: "Español")
+    if params[:subject] == "Maths"
+      @teachers = Teacher.where(subject: "Maths")
+    elsif params[:subject] == "coding"
+      @teachers = Teacher.where(subject: "coding")
+    elsif params[:subject] == "English"
+      @teachers = Teacher.where(subject: "English")
+    elsif params[:subject] == "Spanish"
+      @teachers = Teacher.where(subject: "Spanish")
     else
       @teachers = Teacher.all
     end

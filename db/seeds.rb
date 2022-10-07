@@ -25,7 +25,7 @@ require 'faker'
     description: Faker::Job.position,
     time_cost_per_hour: rand(40000..50000).to_i,
     rating: rand(1..10).to_i,
-    subject: "Matematicas"
+    subject: "Maths"
   )
 end
 
@@ -44,7 +44,7 @@ end
     description: Faker::Job.position,
     time_cost_per_hour: rand(40000..50000).to_i,
     rating: rand(1..10).to_i,
-    subject: "Ingles"
+    subject: "English"
   )
 end
 
@@ -63,7 +63,7 @@ end
     description: Faker::Job.position,
     time_cost_per_hour: rand(40000..50000).to_i,
     rating: rand(1..10).to_i,
-    subject: "Programacion"
+    subject: "Coding"
   )
 end
 
@@ -82,7 +82,7 @@ end
     description: Faker::Job.position,
     time_cost_per_hour: rand(40000..50000).to_i,
     rating: rand(1..10).to_i,
-    subject: "Español"
+    subject: "Spanish"
   )
 end
 
