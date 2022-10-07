@@ -28,7 +28,7 @@ class BookingsController < ApplicationController
     @booking.cost = (@booking.time_ending - @booking.time_starting) * @teacher.time_cost_per_hour
     # @booking.student = current_user.student
     if @booking.save
-      redirect_to bookings_path
+      redirect_to booking_path(@booking)
     else
       render :new, status: :unprocessable_entity
     end
