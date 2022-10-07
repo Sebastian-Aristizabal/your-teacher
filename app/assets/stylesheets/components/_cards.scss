@@ -8,13 +8,14 @@
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: #3bc1d2;
   width: 30%;
   box-shadow: 0 0 30px ;
   overflow: hidden;
   border-radius: 15px;
   margin: 7px;
   height: 600px;
+  padding: 30px;
 
 }
 
@@ -70,7 +71,7 @@
   background: rgb(0, 172, 238);
   background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
   width: 200px;
-  height: 150px;
+  height: 40px;
   line-height: 42px;
   padding: 0;
   border: none;
@@ -312,6 +313,17 @@
   margin: auto;
   background-color: #52bfd5;
   top: 25%;
+}
+
+/* index de profesor*/
+.teacher{
+  background-color: #fff;
+  height: 100%;
+  text-align: center;
+}
+
+.title{
+  text-align: center;
 }
 
 /*footer*/

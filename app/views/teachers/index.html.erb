@@ -26,17 +26,19 @@
     <div class="contenedor2">
       <% @teachers.each do |teacher| %>
 
-          <div class="card">
-            <div class="img"> <img src="https://us.123rf.com/450wm/tuktukdesign/tuktukdesign1802/tuktukdesign180200196/95917369-vector-de-icono-de-profesor-avatar-de-perfil-de-persona-masculina-con-un-libro-y-ense%C3%B1anza-en-la-esc.jpg?ver=6" alt="profesor"></div>
-            <p>
-              <p> TEACHER'S NAME: <%= teacher.user.first_name%> <%= teacher.user.last_name%></p>
-            </p>
-            <p>
-              <P> ABOUT ME: <%= teacher.description%></P>
-            </p>
-            <p>Rating: <%= teacher.rating%>
-            </p>
-            <%= link_to "Details" , teacher_path(teacher), class: "custom-btn btn-3_P" %>
+          <div class="card ">
+            <div class="teacher">
+              <div class="img"> <img src="https://us.123rf.com/450wm/tuktukdesign/tuktukdesign1802/tuktukdesign180200196/95917369-vector-de-icono-de-profesor-avatar-de-perfil-de-persona-masculina-con-un-libro-y-ense%C3%B1anza-en-la-esc.jpg?ver=6" alt="profesor"></div>
+              <p>
+                <p> TEACHER'S NAME: <%= teacher.user.first_name%> <%= teacher.user.last_name%></p>
+              </p>
+              <p>
+                <P> ABOUT ME: <%= teacher.description%></P>
+              </p>
+              <p>Rating: <%= teacher.rating%>
+              </p>
+              <%= link_to "Details" , teacher_path(teacher), class: "custom-btn btn-3_P" %>
+            </div>
           </div>
 
         <% end %>
