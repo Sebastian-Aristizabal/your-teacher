@@ -1,7 +1,8 @@
-  <div class="container-s">
-  <h1>Tu perfil</h1> <i class="fa-solid fa-user"></i>
-  <h6> <strong>Name:</strong> <%= @student.user.first_name %> <%= @student.user.last_name %> </h6>
-  <h6> <strong>Description:</strong> <%= @student.description %> </h6>
 
-  <%= link_to "Conoce los profes", teachers_path, class: "custom-btn btn-3" %>
+  <div class="s-5">
+    <h1>Tu perfil</h1> <i class="fa-solid fa-user"></i>
+    <h6> <strong>Name:</strong> <%= @student.user.first_name %> <%= @student.user.last_name %> </h6>
+    <h6> <strong>Description:</strong> <%= @student.description %> </h6>
+
+    <%= link_to "Conoce los profes", teachers_path, class: "custom-btn btn-3" %>
   </div>
