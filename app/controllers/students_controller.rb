@@ -1,17 +1,6 @@
 class StudentsController < ApplicationController
-  before_action :find_teacher, only: %i[destroy show]
+  before_action :find_student, only: %i[destroy show]
   def index
-    if params[:subject] == "Matematicas"
-      @teachers = Teacher.where(subject: "Matematicas")
-    elsif params[:subject] == "Programacion"
-      @teachers = Teacher.where(subject: "Programacion")
-    elsif params[:subject] == "Ingles"
-      @teachers = Teacher.where(subject: "Ingles")
-    elsif params[:subject] == "Español"
-      @teachers = Teacher.where(subject: "Español")
-    else
-      @teachers = Teacher.all
-    end
   end
 
   def show
@@ -22,11 +11,21 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @teacher = Teacher.new(teacher_params)
-    if @teacher.save
-      redirect_to teacher_path(@teacher)
+    @student = Student.new(student_params)
+    if @student.save
+      redirect_to student_path(@student)
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  private
+
+  def find_student
+    @student = Student.find(params[:id])
+  end
+
+  def student_params
+    params.require(:student).permit(:phone_number, :description)
   end
 end
