@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "logo2.png"%>
+      <%= image_tag "logo2.png", class: "navbar-logo"%>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,14 +20,17 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Teachers", teachers_path, class: "dropdown-item" %>
+              <%= link_to "My classes",  bookings_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
         <% else %>
           <li class="nav-item">
-            <%=  link_to "Login", new_user_session_path, class: "nav-link custom-btn btn-3" %>
+            <%=  link_to "Log in", new_user_session_path, class: "nav-link custom-btn btn-3_P" %>
+          </li>
+          <li class="nav-item">
+            <%=  link_to "Sign up",  new_user_registration_path, class: "nav-link custom-btn btn-3_P" %>
           </li>
         <% end %>
       </ul>

@@ -11,8 +11,8 @@
   <h6><strong>Cost:</strong> <%= @booking.cost %></h6>
   <%= link_to "Delete",
     booking_path(@booking),
-    class: "custom-btn btn-3",
+    class: "custom-btn btn-3_P",
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %>
-  <%= link_to "Back all bookings", bookings_path, class: "custom-btn btn-3" %>
+  <%= link_to "Back all bookings", bookings_path, class: "custom-btn btn-3_P" %>
 </div>

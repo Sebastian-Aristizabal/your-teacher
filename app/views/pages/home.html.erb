@@ -14,39 +14,36 @@
 
   <div class="banner">
     <div class="container">
-      <h1>YOUR TEACHER es una pagina que te conecta con los mejores profesores del mundo para brindarte las mejores
-        asesorias</h1>
+      <h1>YOUR TEACHER is a platform that helps you to connect with the best teachers around the world in order to provide you the best assestment.</h1>
 
-      <p>Cambia tu vida y conectate con ellos </p>
-      <%= link_to "PROFESORES" , teachers_path, class: "custom-btn btn-3" %>
+      <p>Change your learning style and get prepared with the best ones </p>
+      <%= link_to "Our teachers" , teachers_path, class: "custom-btn btn-3_P" %>
     </div>
   </div>
 
 
-  <div class="container">
-    <h2 class="text-center">ESCOGE EL TEMA DE TU ASESORIA</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://educacion30.b-cdn.net/wp-content/uploads/2020/03/fondo-matematicas_23-2148146270.jpg"
-          alt="Matemáticas">
-        <%= link_to "Matemáticas" , teachers_path(subject: "Matematicas" ), class: "custom-btn btn-3" %>
+  <div class="subjects_container">
+    <h2 class="text-center">On which field do you want to improve?</h2>
+    <div class="cards_h subjects_cards">
+
+      <div class="card_h">
+      <%= link_to teachers_path(subject: "Matematicas" ) do%>
+        <%= image_tag "https://educacion30.b-cdn.net/wp-content/uploads/2020/03/fondo-matematicas_23-2148146270.jpg"%> <% end %>
       </div>
 
-      <div class="card">
-        <img
-          src="https://us.123rf.com/450wm/luplupme/luplupme1907/luplupme190700594/129453972-ilustraci%C3%B3n-de-vector-de-clase-de-aprendizaje-de-idioma-ingl%C3%A9s-brit%C3%A1nico-logotipo-de-la-bandera-brit.jpg?ver=6"
-          alt="INGLES">
-        <%= link_to "Ingles" , teachers_path(subject: "Ingles" ), class: "custom-btn btn-3" %>
-
-      </div>
-      <div class="card">
-        <img src="https://assets.bedu.org/images/top-lenguajes-programacion-2021.jpg" alt="PROGRAMACION">
-        <%= link_to "Programación" , teachers_path(subject: "Programacion" ), class: "custom-btn btn-3" %>
+      <div class="card_h">
+        <%= link_to teachers_path(subject: "Ingles" ) do %>
+        <%= image_tag "https://us.123rf.com/450wm/luplupme/luplupme1907/luplupme190700594/129453972-ilustraci%C3%B3n-de-vector-de-clase-de-aprendizaje-de-idioma-ingl%C3%A9s-brit%C3%A1nico-logotipo-de-la-bandera-brit.jpg?ver=6"%> <% end %>
       </div>
 
-      <div class="card">
-        <img src="https://www.salminter.com/blog/wp-content/uploads/2017/01/347.jpg" alt="ESPAÑOL">
-        <%= link_to "Español" , teachers_path(subject: "Español" ), class: "custom-btn btn-3" %>
+      <div class="card_h z">
+      <%= link_to teachers_path(subject: "Programacion" ) do%>
+        <%= image_tag"https://assets.bedu.org/images/top-lenguajes-programacion-2021.jpg"  %> <% end %>
+      </div>
+
+      <div class="card_h z">
+      <%= link_to teachers_path(subject: "Español" ) do%>
+       <%= image_tag "https://www.salminter.com/blog/wp-content/uploads/2017/01/347.jpg" %> <% end %>
       </div>
     </div>
 
