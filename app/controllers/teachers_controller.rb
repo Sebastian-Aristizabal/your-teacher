@@ -1,5 +1,7 @@
 class TeachersController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[ index show ]
   before_action :find_teacher, only: %i[destroy show]
+
   def index
     if params[:subject] == "Matematicas"
       @teachers = Teacher.where(subject: "Matematicas")

@@ -12,5 +12,9 @@
   <h6> <strong>Rating:</strong> <%= @teacher.rating%> </h6>
   <h6> <strong>Specialty:</strong> <%= @teacher.subject%> </h6>
   <h6> <strong>Cost time per hour:</strong> <%= @teacher.time_cost_per_hour%> </h6>
-  <%= link_to "Book now", new_teacher_booking_path(@teacher), class: "custom-btn btn-3_P" %>
+  <%# if current_user.student.id == nil %>
+    <p>You must complete your student profile </p>
+  <%# else %>
+    <%= link_to "Book now", new_teacher_booking_path(@teacher), class: "custom-btn btn-3_P" %>
+  <%# end %>
   </div>
