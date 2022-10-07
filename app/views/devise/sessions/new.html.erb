@@ -1,4 +1,4 @@
-<h2 class="title-form">Log in</h2>
+<h2 class="title-form">I have an account</h2>
 
 <div class="contenedor3">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
@@ -17,11 +17,15 @@
   <div class="form-actions custom-btn btn-3">
     <%= f.button :submit, "Log in" %>
   </div>
+  <p>   </p>
+  <p> i dont have  </p>
 
   <div>
-    <%= render "devise/shared/links" %>
+
+     <a href="/users/sign_up">Sign up</a><br />
+
+    <a href="/users/password/new">Forgot your password?</a><br />
 
   </div>
 <% end %>
-
 </div>

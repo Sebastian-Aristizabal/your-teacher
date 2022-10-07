@@ -8,13 +8,14 @@
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: #3bc1d2;
   width: 30%;
   box-shadow: 0 0 30px ;
   overflow: hidden;
   border-radius: 15px;
   margin: 7px;
   height: 600px;
+  padding: 30px;
 
 }
 
@@ -70,7 +71,7 @@
   background: rgb(0, 172, 238);
   background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
   width: 200px;
-  height: 150px;
+  height: 40px;
   line-height: 42px;
   padding: 0;
   border: none;
@@ -314,6 +315,17 @@
   top: 25%;
 }
 
+/* index de profesor*/
+.teacher{
+  background-color: #fff;
+  height: 100%;
+  text-align: center;
+}
+
+.title{
+  text-align: center;
+}
+
 /*footer*/
 
 .site-footer
@@ -432,7 +444,7 @@
 
 /* show de profesor*/
 .s {
-  width: 375px;
+  width: 630px;
   margin: auto;
   background-color: #52bfd5;
   margin: 15px auto;
@@ -451,6 +463,29 @@
   margin: auto;
   background-color: #52bfd5;
   margin: 420px auto 50px auto;
+  border-radius: 20px;
+  box-shadow: 5px 10px #888888;
+}
+
+/*recordar contraseña*/
+.s-1{
+  width: 375px;
+  margin: auto;
+  background-color: #52bfd5;
+  margin: 15px auto;
+  padding: 34px;
+  margin: 30px auto 50px auto;
+  border-radius: 20px;
+  box-shadow: 5px 10px #888888;
+}
+
+.s-3{
+  width: 531px;
+  margin: auto;
+  background-color: #52bfd5;
+  margin: 15px auto;
+  padding: 34px;
+  margin: 90px auto 50px auto;
   border-radius: 20px;
   box-shadow: 5px 10px #888888;
 }
